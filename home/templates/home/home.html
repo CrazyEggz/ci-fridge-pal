@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="col-sm-11 col-md-5 mx-auto mt-t px-3">
+        <h1 class="fw-light">Track and Manage Your Fridge</h1>
+        <p class="fw-light">Meet Fridge Pal: Your ultimate kitchen assistant! Effortlessly manage your fridge inventory, keep track of
+            what's in stock, and never miss a best-before date again.
+        </p>
+        <div>
+            <a href="{% url 'login' %}" class="btn btn-primary">Get started now!</a>
+        </div>
+    </div>
+</div>
+{% endblock content %}
