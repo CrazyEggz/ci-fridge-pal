@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 class Item(models.Model):
@@ -10,6 +11,28 @@ class Item(models.Model):
     use_by = models.DateTimeField(null=True, blank=True)
     location = models.ForeignKey('Location')
     user = models.ForeignKey('User', on_delete=models.CASCADE)
+
+    def __str__(self):
+        return self.name
+
+
+class Category(models.Model):
+    name = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.name
+
+
+class Location(models.Model):
+    name = models.CharField(max_length=200)
+    compartment = models.IntegerField()
+
+    def __str__(self):
+        return str(self.compartment)
+
+
+class Unit(models.Model):
+    name = models.CharField(max_length=200)
 
     def __str__(self):
         return self.name
