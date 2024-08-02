@@ -1,14 +1,16 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+EXPIRY_DATE_TYPE = ((0, 'Best-before-date'), (1, 'Use-by-date'))
+
 # Create your models here.
 class Item(models.Model):
     name = models.CharField(max_length=200)
     quantity = models.CharField(max_length=200)
     unit = models.ForeignKey('unit', on_delete=models.SET_NULL, null=True, blank=True)
     category = models.ForeignKey('Category', on_delete=models.SET_NULL, null=True, blank=True)
-    best_before = models.DateTimeField(null=True, blank=True)
-    use_by = models.DateTimeField(null=True, blank=True)
+    expiry_date = models.DateTimeField(null=True, blank=True)
+    expiry_date_type = models.IntegerField(choices=EXPIRY_DATE_TYPE, null=True, blank=True)
     location = models.ForeignKey('Location', on_delete=models.SET_NULL, null=True, blank=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
