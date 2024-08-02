@@ -6,4 +6,5 @@ from .models import Item
 # Create your views here.
 class Dashboard(View):
     def get(self, request):
-        return render(request, 'dashboard/dashboard.html')
+        items = Item.objects.filter(user=self.request.user.id).order_by('name')
+        return render(request, 'dashboard/dashboard.html', {'items': items})

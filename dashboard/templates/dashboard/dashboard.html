@@ -19,6 +19,19 @@
                 </tr>
             </thead>
             <tbody>
+                {% if items %}
+                    {% for item in items %}
+                    <tr>
+                        <th scope="row">{{ item.name }}</th>
+                        <td>{{ item.quantity }}{{ item.unit }}</td>
+                        <td>{{ item.expiry_date }}</td>
+                        <td>{{ item.category }}</td>
+                        <td>Edit</td>
+                        <td>Consumed</td>
+                        <td>Wasted</td>
+                    </tr>
+                    {% endfor %}
+                {% else %}
                 <tr>
                     <th scope="row">-</th>
                     <td>-</td>
@@ -28,6 +41,7 @@
                     <td>Consumed</td>
                     <td>Wasted</td>
                 </tr>
+                {% endif %}
             </tbody>
         </table>
     </div>
