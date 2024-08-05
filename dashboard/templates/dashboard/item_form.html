@@ -7,7 +7,14 @@
         <form method="post">
             {% csrf_token %}
             {{ form | crispy }}
-            <button class="btn btn-primary">Add Item</button>
+            <button class="btn btn-primary">
+                {% if request.view == "add-item" %}
+                Add
+                {% else %}
+                Edit
+                {% endif %}
+                Item
+            </button>
         </form>
     </div>
 </div>
