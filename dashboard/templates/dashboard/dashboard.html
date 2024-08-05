@@ -31,7 +31,9 @@
                             <td>{{ item.quantity }} {{ item.unit | default_if_none:'' }}</td>
                             <td>{{ item.expiry_date }}</td>
                             <td>{{ item.category }}</td>
-                            <td>Edit</td>
+                            <td>
+                                <a href="{% url 'edit-item' item.pk %}"><i class="fa-solid fa-pen"></i></a>
+                            </td>
                             <td>Consumed</td>
                             <td>Wasted</td>
                         </tr>
