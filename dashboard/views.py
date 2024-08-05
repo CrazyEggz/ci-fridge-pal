@@ -2,7 +2,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.urls import reverse_lazy
 from django.views.generic import TemplateView, View
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView
 from django.contrib.messages.views import SuccessMessageMixin
 from django.contrib.auth.mixins import LoginRequiredMixin
 
@@ -26,3 +26,11 @@ class AddItem(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     def form_valid(self, form):
         form.instance.user = self.request.user
         return super().form_valid(form)
+
+
+class EditItem(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
+    model = Item
+    form_class = ItemForm
+    template_name = 'dashboard/item_form.html'
+    success_url = reverse_lazy('dashboard')
+    success_message = "Item %(name)s was updated successfully."
