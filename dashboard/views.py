@@ -21,7 +21,7 @@ class AddItem(LoginRequiredMixin, SuccessMessageMixin, CreateView):
     form_class = ItemForm
     template_name = 'dashboard/item_form.html'
     success_url = reverse_lazy('dashboard')
-    success_message = "New item was created successfully"
+    success_message = "Item %(name)s was added successfully."
 
     def form_valid(self, form):
         form.instance.user = self.request.user

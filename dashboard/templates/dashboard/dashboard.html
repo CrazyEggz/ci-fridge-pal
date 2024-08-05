@@ -2,6 +2,9 @@
 
 {% block content %}
 <div class="row">
+    {% for message in messages %}
+    <h4>{{ message }}</h4>
+    {% endfor %}
     <div class="col-md-10 col-10 mx-auto mt-5">
         <div class="d-flex justify-content-end">
             <a href="{% url 'add-item' %}" class="btn btn-primary">Add Item</a>
