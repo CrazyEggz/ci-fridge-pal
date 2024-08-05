@@ -23,7 +23,7 @@
                     {% for item in items %}
                     <tr>
                         <th scope="row">{{ item.name }}</th>
-                        <td>{{ item.quantity }}{{ item.unit }}</td>
+                        <td>{{ item.quantity }} {{ item.unit | default_if_none:'' }}</td>
                         <td>{{ item.expiry_date }}</td>
                         <td>{{ item.category }}</td>
                         <td>Edit</td>
