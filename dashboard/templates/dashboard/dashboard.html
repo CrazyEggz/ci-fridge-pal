@@ -35,7 +35,7 @@
                                 <a href="{% url 'edit-item' item.pk %}"><i class="fa-solid fa-pen"></i></a>
                             </td>
                             <td>
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteModal" data-bs-delete-url="{% url 'delete-item' item.pk %}">
                                     <i class="fa-regular fa-trash-can"></i>
                                 </button>
                             </td>
