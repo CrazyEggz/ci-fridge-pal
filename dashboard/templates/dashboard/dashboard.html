@@ -38,7 +38,11 @@
                         <tr>
                             <th scope="row">{{ item.name }}</th>
                             <td>{{ item.quantity }} {{ item.unit | default_if_none:'' }}</td>
-                            <td>{{ item.expiry_date }}</td>
+                            <td>
+                                {{ item.expiry_date }}
+                                {% if item.expiry_date_type == 0 %} <small>(best-before)</small> {% endif %}
+                                {% if item.expiry_date_type == 1 %} <small>(use-by)</small> {% endif %}
+                            </td>
                             <td>{{ item.category }}</td>
                             <td>
                                 <a href="{% url 'edit-item' item.pk %}"><i class="fa-solid fa-pen"></i></a>
@@ -92,7 +96,11 @@
                         <tr>
                             <th scope="row">{{ item.name }}</th>
                             <td>{{ item.quantity }} {{ item.unit | default_if_none:'' }}</td>
-                            <td>{{ item.expiry_date }}</td>
+                            <td>
+                                {{ item.expiry_date }}
+                                {% if item.expiry_date_type == 0 %} <small>(best-before)</small> {% endif %}
+                                {% if item.expiry_date_type == 1 %} <small>(use-by)</small> {% endif %}
+                            </td>
                             <td>{{ item.category }}</td>
                             <td>
                                 <a href="{% url 'edit-item' item.pk %}"><i class="fa-solid fa-pen"></i></a>
