@@ -37,7 +37,7 @@
                                 <a href="{% url 'edit-item' item.pk %}"><i class="fa-solid fa-pen"></i></a>
                             </td>
                             <td>
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteModal" data-bs-delete-url="{% url 'delete-item' item.pk %}">
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteItemModal" data-bs-delete-url="{% url 'delete-item' item.pk %}">
                                     <i class="fa-regular fa-trash-can"></i>
                                 </button>
                             </td>
@@ -83,7 +83,7 @@
                                 <a href="{% url 'edit-item' item.pk %}"><i class="fa-solid fa-pen"></i></a>
                             </td>
                             <td>
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteModal">
+                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteItemModal" data-bs-delete-url="{% url 'delete-item' item.pk %}">
                                     <i class="fa-regular fa-trash-can"></i>
                                 </button>
                             </td>
@@ -106,7 +106,7 @@
     </div>
 
     <!-- Delete Item Modal -->
-    <div id="deleteModal" class="modal">
+    <div id="deleteItemModal" class="modal">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -119,7 +119,10 @@
                     <p>This will remove the item from your inventory permanently.</p>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-primary">Delete</button>
+                    <form id="model-delete-btn" action="#" method="post">
+                        <button type="submit" class="btn btn-primary">Delete</button>
+                        {% csrf_token %}
+                    </form>
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
                 </div>
             </div>

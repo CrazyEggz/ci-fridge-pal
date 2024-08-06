@@ -39,4 +39,4 @@ class EditItem(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
 class DeleteItem(LoginRequiredMixin, SuccessMessageMixin, DeleteView):
     model = Item
     success_url = reverse_lazy('dashboard')
-    success_message = "Item %(name)s was deleted successfully."
+    success_message = "Item was deleted successfully."
