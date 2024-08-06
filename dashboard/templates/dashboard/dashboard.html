@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block content %}
 <div class="row">
     {% for message in messages %}
@@ -125,3 +127,7 @@
     </div>
 </div>
 {% endblock content %}
+
+{% block javascript %}
+<script src="{% static 'js/dashboard.js' %}"></script>
+{% endblock javascript %}
