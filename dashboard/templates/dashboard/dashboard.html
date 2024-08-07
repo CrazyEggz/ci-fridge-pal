@@ -8,13 +8,23 @@
     {% include 'dashboard/dashboard_messages.html' %}
     <div class="col-md-10 col-10 mx-auto mt-5">
         <div class="d-flex justify-content-end">
+            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasFilter"
+                aria-controls="offcanvasRight">Filter</button>
             <a href="{% url 'add-item' %}" class="btn btn-primary">Add Item</a>
         </div>
-        <!-- Filter Form -->
-        <form method="get">
-            {{ items_filter.form | crispy }}
-            <button type="submit">Apply</button>
-        </form>
+        <!-- Offcanvas Filter Form -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasFilter" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasRightLabel">Filter</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <form method="get">
+                    {{ items_filter.form | crispy }}
+                    <button type="submit">Apply</button>
+                </form>
+            </div>
+        </div>
         <table id="fridge-table" class="table table-hover table-striped">
             <h3 class="fw-light">Fridge Inventory</h3>
             <thead>
