@@ -8,12 +8,14 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 
 from .models import Item
 from .forms import ItemForm
+from .filters import ItemFilter
 
 # Create your views here.
 class Dashboard(View):
     def get(self, request):
         items = Item.objects.filter(user=self.request.user.id).order_by('name')
-        return render(request, 'dashboard/dashboard.html', {'items': items})
+        items_filter = ItemFilter(request.GET, queryset = items)
+        return render(request, 'dashboard/dashboard.html', {'items': items_filter.qs, 'items_filter': items_filter})
 
 
 class AddItem(LoginRequiredMixin, SuccessMessageMixin, CreateView):
