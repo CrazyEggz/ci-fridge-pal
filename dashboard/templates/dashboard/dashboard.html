@@ -8,6 +8,11 @@
     {% include 'dashboard/dashboard_messages.html' %}
     <div class="col-md-10 col-10 mx-auto mt-5">
         <div class="d-flex justify-content-end">
+
+            <button data-parameter-key="{{ items_filter.form.location.name }}" data-parameter-value="" class="parameter-btn btn btn-primary">All Items</button>
+            <button data-parameter-key="{{ items_filter.form.location.name }}" data-parameter-value="0" class="parameter-btn btn btn-primary">My Fridge</button>
+            <button data-parameter-key="{{ items_filter.form.location.name }}" data-parameter-value="1" class="parameter-btn btn btn-primary">My Freezer</button>
+
             <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasFilter"
                 aria-controls="offcanvasRight">Filter</button>
             <a href="{% url 'add-item' %}" class="btn btn-primary">Add Item</a>
