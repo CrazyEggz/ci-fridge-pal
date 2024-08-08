@@ -41,8 +41,9 @@
                 </form>
             </div>
         </div>
+        <!-- Inventory Table -->
         <table id="fridge-table" class="table table-hover table-striped">
-            <h3 class="fw-light">Fridge Inventory</h3>
+            <h3 class="fw-light">{{ user.get_username }}'s inventory</h3>
             <thead>
                 <tr>
                     <th scope="col">Item</th>
@@ -64,7 +65,6 @@
             <tbody>
                 {% if items %}
                     {% for item in items %}
-                        {% if item.location == 0 %}
                         <tr>
                             <th scope="row">{{ item.name }}</th>
                             <td>{{ item.quantity }} {{ item.unit | default_if_none:'' }}</td>
@@ -84,65 +84,6 @@
                                 </button>
                             </td>
                         </tr>
-                        {% endif %}
-                    {% endfor %}
-                {% else %}
-                <tr>
-                    <th scope="row">-</th>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>Edit</td>
-                    <td>Consumed</td>
-                    <td>Wasted</td>
-                </tr>
-                {% endif %}
-            </tbody>
-        </table>
-        <table id="freezer-table" class="table table-hover table-striped">
-            <h3 class="fw-light">Freezer Inventory</h3>
-            <thead>
-                <tr>
-                    <th scope="col">Item</th>
-                    <th scope="col">Qty</th>
-                    <th scope="col">
-                        Expiry date
-                        <i class="fa-regular fa-circle-question" data-bs-container="body" data-bs-toggle="popover"
-                            data-bs-placement="top" data-bs-html="true" data-bs-trigger="hover focus"
-                            data-bs-content="Best-before dates: The period during which the food is expected to remain at its best quality. <br />Use-by dates: The last date the food is safe to consume."
-                            data-bs-original-title="A little tip..." aria-describedby="popover470314">
-                        </i>
-                    </th>
-                    <th scope="col">Category</th>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
-                </tr>
-            </thead>
-            <tbody>
-                {% if items %}
-                    {% for item in items %}
-                        {% if item.location == 1 %}
-                        <tr>
-                            <th scope="row">{{ item.name }}</th>
-                            <td>{{ item.quantity }} {{ item.unit | default_if_none:'' }}</td>
-                            <td>
-                                {{ item.expiry_date }}
-                                {% if item.expiry_date_type == 0 %} <small>(best-before)</small> {% endif %}
-                                {% if item.expiry_date_type == 1 %} <small>(use-by)</small> {% endif %}
-                            </td>
-                            <td>{{ item.category | default_if_none:'-' }}</td>
-                            <td>
-                                <a href="{% url 'edit-item' item.pk %}"><i class="fa-solid fa-pen"></i></a>
-                            </td>
-                            <td>
-                                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteItemModal"
-                                    data-bs-delete-url="{% url 'delete-item' item.pk %}" data-bs-item-name="{{ item.name }}">
-                                    <i class="fa-regular fa-trash-can"></i>
-                                </button>
-                            </td>
-                        </tr>
-                        {% endif %}
                     {% endfor %}
                 {% else %}
                 <tr>
@@ -158,7 +99,6 @@
             </tbody>
         </table>
     </div>
-
     <!-- Delete Item Modal -->
     <div id="deleteItemModal" class="modal">
         <div class="modal-dialog" role="document">
