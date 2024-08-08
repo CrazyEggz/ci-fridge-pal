@@ -8,16 +8,25 @@
     {% include 'dashboard/dashboard_messages.html' %}
     <div class="col-md-10 col-10 mx-auto mt-5">
         <!-- Buttons -->
-        <div class="d-flex justify-content-end">
-            <button data-parameter-key="{{ items_filter.form.location.name }}" data-parameter-value=""
-                class="parameter-btn btn btn-primary">All Items <i class="btn-icon fa-solid fa-basket-shopping"></i></button>
-            <button data-parameter-key="{{ items_filter.form.location.name }}" data-parameter-value="0"
-                class="parameter-btn btn btn-primary">My Fridge <i class="btn-icon fa-solid fa-droplet"></i></button>
-            <button data-parameter-key="{{ items_filter.form.location.name }}" data-parameter-value="1"
-                class="parameter-btn btn btn-primary">My Freezer <i class="btn-icon fa-regular fa-snowflake"></i></button>
-            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasFilter"
-                aria-controls="offcanvasRight">Filter <i class="btn-icon fa-solid fa-filter"></i></button>
-            <a href="{% url 'add-item' %}" class="btn btn-primary">Add Item <i class="fa-solid fa-plus"></i></a>
+        <div class="d-flex justify-content-between">
+            <div class="d-inline-flex justify-content-start">
+                <button data-parameter-key="{{ items_filter.form.location.name }}" data-parameter-value=""
+                    class="parameter-btn btn btn-primary">All Items <i class="btn-icon fa-solid fa-basket-shopping"></i>
+                </button>
+                <button data-parameter-key="{{ items_filter.form.location.name }}" data-parameter-value="0"
+                    class="parameter-btn btn btn-primary">My Fridge <i class="btn-icon fa-solid fa-droplet"></i>
+                </button>
+                <button data-parameter-key="{{ items_filter.form.location.name }}" data-parameter-value="1"
+                    class="parameter-btn btn btn-primary">My Freezer <i class="btn-icon fa-regular fa-snowflake"></i>
+                </button>
+            </div>
+            <div class="d-inline-flex justify-content-end">
+                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasFilter" aria-controls="offcanvasRight">Filter
+                    <i class="btn-icon fa-solid fa-filter"></i>
+                </button>
+                <a href="{% url 'add-item' %}" class="btn btn-primary">Add Item <i class="fa-solid fa-plus"></i></a>
+            </div>
         </div>
         <!-- Offcanvas Filter Form -->
         <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasFilter" aria-labelledby="offcanvasRightLabel">
