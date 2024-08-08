@@ -46,6 +46,7 @@
             <h3 class="fw-light">{{ user.get_username }}'s inventory</h3>
             <thead>
                 <tr>
+                    <th scope="col"></th>
                     <th scope="col">Item</th>
                     <th scope="col">Qty</th>
                     <th scope="col">
@@ -59,13 +60,19 @@
                     <th scope="col">Category</th>
                     <th scope="col"></th>
                     <th scope="col"></th>
-                    <th scope="col"></th>
                 </tr>
             </thead>
             <tbody>
                 {% if items %}
                     {% for item in items %}
                         <tr>
+                            <td>
+                                {% if item.location == 0 %}
+                                <i class="btn-icon fa-solid fa-droplet"></i>
+                                {% else %}
+                                <i class="btn-icon fa-regular fa-snowflake"></i>
+                                {% endif %}
+                            </td>
                             <th scope="row">{{ item.name }}</th>
                             <td>{{ item.quantity }} {{ item.unit | default_if_none:'' }}</td>
                             <td>
