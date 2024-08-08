@@ -8,7 +8,7 @@
             {% csrf_token %}
             {{ form | crispy }}
             <button class="btn btn-primary">
-                {% if request.view == "add-item" %}
+                {% if request.resolver_match.url_name == "add-item" %}
                 Add
                 {% else %}
                 Edit
