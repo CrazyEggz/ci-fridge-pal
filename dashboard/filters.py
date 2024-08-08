@@ -20,11 +20,11 @@ def expiryDateChoiceToDate(choice):
 
 class ItemFilter(django_filters.FilterSet):
     expiry_date = django_filters.TypedChoiceFilter(choices = EXPIRY_DATE_CHOICES, label='Expires within', lookup_expr='lt', coerce=expiryDateChoiceToDate)
+    location = django_filters.NumberFilter(widget = forms.HiddenInput())
 
     class Meta:
         model = Item
         fields = {
             'name': ['icontains'],
             'category': ['exact'],
-            'location': ['exact'],
         }
