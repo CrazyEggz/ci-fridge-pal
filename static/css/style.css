@@ -1,3 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Navbar & Footer */
+#footer {
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#footer a {
+    font-size: 120%;
+    padding: 0px 5px;
+}
+
 /* Dashboard Page */
 .btn-icon {
     margin-left: 3px;
