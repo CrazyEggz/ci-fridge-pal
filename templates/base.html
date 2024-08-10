@@ -44,11 +44,11 @@
                     </ul>
                 </div>
                 {% if user.is_authenticated %}
-                <div class="nav-item">
+                <div id="logged-in-user" class="nav-item">
                     <p id="user-name"><i class="fa-regular fa-user"></i>&nbsp{{ user.get_username }}</p>
                 </div>
                 {% endif %}
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                <button id="burger-icon" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>

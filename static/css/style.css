@@ -2,7 +2,11 @@
     box-sizing: border-box;
 }
 
-/* Navbar & Footer */
+/* ---Navbar & Footer--- */
+#logo {
+    flex-grow: 1;
+}
+
 #logo img {
     height: 25px;
     position: relative;
@@ -39,4 +43,20 @@ font-size: 22px;
 /* Dashboard Page */
 .btn-icon {
     margin-left: 3px;
+}
+
+/* ---Media Queries--- */
+@media screen and (max-width: 990px) {
+    #logged-in-user {
+        order: 0;
+    }
+
+    #burger-icon {
+        order: 1;
+        margin-left: 13px;
+    }
+
+    #navbarNav {
+        order: 2;
+    }
 }
