@@ -3,6 +3,16 @@
 }
 
 /* Navbar & Footer */
+#logo img {
+    height: 25px;
+    position: relative;
+    bottom: 5px;
+}
+
+#logo span {
+font-size: 22px;
+}
+
 #user-name {
     background-color: orangered;
     color: white;
