@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'django_filters',
     'home',
     'dashboard',
+    'about',
 ]
 
 LOGIN_REDIRECT_URL = '/dashboard/'
