@@ -3,6 +3,10 @@
 }
 
 /* ---Navbar & Footer--- */
+#navbar {
+    padding: 0px 18px;
+}
+
 #logo {
     flex-grow: 1;
 }
