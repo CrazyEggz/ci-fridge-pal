@@ -6,29 +6,56 @@
 <div id="about-container" class="container-fluid">
     <div class="row">
         <div class="about-card col-12 col-lg-4">
-            <img src="../static/images/placeholder.svg" alt="">
-            <h4>Welcome to Fridge Pal!</h4>
-            <p>Our app helps you keep track of everything in your fridge, from the quantity of items to their expiry
-                dates. You can easily organize your food by category, location, and more, ensuring nothing goes to
-                waste. Whether you’re checking what’s running low or what needs to be used up, Fridge Pal makes managing
-                your fridge a breeze!</p>
+            <div class="about-image-container">
+                <img src="../static/images/placeholder.svg" alt="">
+                <p class="about-content fw-light">Our app helps you keep track of everything in your fridge, from the
+                    quantity of items to their expiry
+                    dates. You can easily organize your food by category, location, and more, ensuring nothing goes to
+                    waste. Whether you’re checking what’s running low or what needs to be used up, Fridge Pal makes
+                    managing
+                    your fridge a breeze!</p>
+            </div>
+            <h5 class="fw-light">Welcome to Fridge Pal!</h5>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
+                aria-expanded="false" aria-controls="collapseExample">
+                Click for more
+            </button>
         </div>
         <div class="about-card col-12 col-lg-4">
-            <img src="../static/images/placeholder.svg" alt="">
-            <h4>Welcome to Fridge Pal!</h4>
-            <p>Our app helps you keep track of everything in your fridge, from the quantity of items to their expiry
-                dates. You can easily organize your food by category, location, and more, ensuring nothing goes to
-                waste. Whether you’re checking what’s running low or what needs to be used up, Fridge Pal makes managing
-                your fridge a breeze!</p>
+            <div class="about-image-container">
+                <img src="../static/images/placeholder.svg" alt="">
+                <p class="about-content fw-light">Our app helps you keep track of everything in your fridge, from the
+                    quantity of items to their expiry
+                    dates. You can easily organize your food by category, location, and more, ensuring nothing goes to
+                    waste. Whether you’re checking what’s running low or what needs to be used up, Fridge Pal makes
+                    managing
+                    your fridge a breeze!</p>
+            </div>
+            <h5 class="fw-light">Welcome to Fridge Pal!</h5>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
+                aria-expanded="false" aria-controls="collapseExample">
+                Click for more
+            </button>
         </div>
         <div class="about-card col-12 col-lg-4">
-            <img src="../static/images/placeholder.svg" alt="">
-            <h4>Welcome to Fridge Pal!</h4>
-            <p>Our app helps you keep track of everything in your fridge, from the quantity of items to their expiry
-                dates. You can easily organize your food by category, location, and more, ensuring nothing goes to
-                waste. Whether you’re checking what’s running low or what needs to be used up, Fridge Pal makes managing
-                your fridge a breeze!</p>
+            <div class="about-image-container">
+                <img src="../static/images/placeholder.svg" alt="">
+                <p class="about-content fw-light">Understand the difference between best-before dates and use-by dates
+                    help reduce the food waste.
+                    Best-before dates show when food is at its best quality, but it's usually still safe to eat after.
+                    Use-by dates are about safety—food should be consumed by this date to avoid health risks. So, while
+                    you can often keep food past the best-before date, use-by dates should be strictly followed.</p>
+            </div>
+            <h5 class="fw-light">A little tip</h5>
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
+                aria-expanded="false" aria-controls="collapseExample">
+                Click for more
+            </button>
         </div>
     </div>
 </div>
 {% endblock content %}
+
+{% block javascript %}
+<script src="{% static 'js/about.js' %}"></script>
+{% endblock javascript %}
