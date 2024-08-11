@@ -30,6 +30,19 @@ font-size: 22px;
     margin-left: 10px;
 }
 
+.bg-light {
+    background-color: transparent !important;
+}
+
+.navbar-toggler,
+.navbar-toggler:focus,
+.navbar-toggler:active,
+.navbar-toggler-icon:focus {
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
 #footer {
     text-align: center;
     padding: 10px;
@@ -88,6 +101,8 @@ font-size: 22px;
 
     #burger-icon {
         order: 1;
+        border: none;
+        padding: 0px;
         margin-left: 13px;
     }
 
