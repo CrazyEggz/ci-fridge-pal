@@ -11,9 +11,9 @@ for (let button of aboutCardButtons) {
 function showContent() {
     const aboutContent = this.parentElement.getElementsByClassName('about-content')[0];
     aboutContent.classList.toggle('opaque');
-    if (this.innerText === 'Read more') {
+    if (this.innerText === 'Click for more') {
         this.innerText = 'Hide text';
     } else {
-        this.innerText = 'Read more';
+        this.innerText = 'Click for more';
     }
 }
