@@ -70,12 +70,12 @@
                             <tr>
                                 <td>
                                     {% if item.location == 0 %}
-                                    <i class="btn-icon fa-solid fa-droplet"></i>
+                                    <i class="grey-icon btn-icon fa-solid fa-droplet"></i>
                                     {% else %}
-                                    <i class="btn-icon fa-regular fa-snowflake"></i>
+                                    <i class="grey-icon btn-icon fa-regular fa-snowflake"></i>
                                     {% endif %}
                                 </td>
-                                <th scope="row">{{ item.name }}</th>
+                                <td scope="row">{{ item.name }}</td>
                                 <td>{{ item.quantity }} {{ item.unit | default_if_none:'' }}</td>
                                 <td>
                                     {% if item.expiry_date_type == 0 %}
