@@ -180,6 +180,24 @@ margin-left: 1.5px;
     left: 0px;
 }
 
+.expiry-date-tag {
+    font-size: smaller;
+    width: 38px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center
+}
+
+#bbd {
+    color: white;
+    background-color: #f7cd4c;
+}
+
+#ubd {
+    color: white;
+    background-color: #f85858;
+}
+
 /* ---Media Queries--- */
 @media screen and (max-width: 990px) {
     #logged-in-user {

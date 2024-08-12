@@ -55,7 +55,7 @@
                             Expiry date
                             <i class="fa-regular fa-circle-question" data-bs-container="body" data-bs-toggle="popover"
                                 data-bs-placement="top" data-bs-html="true" data-bs-trigger="hover focus"
-                                data-bs-content="Best-before dates: The period during which the food is expected to remain at its best quality. <br />Use-by dates: The last date the food is safe to consume."
+                                data-bs-content="Best-before dates(BBD): The period during which the food is expected to remain at its best quality. <br/>Use-by dates(UBD): The last date the food is safe to consume."
                                 data-bs-original-title="A little tip..." aria-describedby="popover470314">
                             </i>
                         </th>
@@ -78,9 +78,13 @@
                                 <th scope="row">{{ item.name }}</th>
                                 <td>{{ item.quantity }} {{ item.unit | default_if_none:'' }}</td>
                                 <td>
+                                    {% if item.expiry_date_type == 0 %}
+                                        <div id="bbd" class="expiry-date-tag d-inline-flex"><small>BBD</small></div>
+                                    {% endif %}
+                                    {% if item.expiry_date_type == 1 %}
+                                        <div id="ubd" class="expiry-date-tag d-inline-flex"><small>UBD</small></div>
+                                    {% endif %}
                                     {{ item.expiry_date }}
-                                    {% if item.expiry_date_type == 0 %} <small>(best-before)</small> {% endif %}
-                                    {% if item.expiry_date_type == 1 %} <small>(use-by)</small> {% endif %}
                                 </td>
                                 <td>{{ item.category | default_if_none:'-' }}</td>
                                 <td>
