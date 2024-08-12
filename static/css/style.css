@@ -178,7 +178,13 @@ margin-left: 1.5px;
     color: #767676;
 }
 
+#fridge-table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
 .table-head {
+    border-bottom: solid #767676;
     position: sticky;
     top: 58px;
     left: 0px;
