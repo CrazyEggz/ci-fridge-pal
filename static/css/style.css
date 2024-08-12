@@ -4,6 +4,15 @@
     padding: 0px;
 }
 
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    min-height: 100vh;
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
 /* ---Navbar & Footer--- */
 #navbar {
     margin: 10px 0px;
@@ -51,10 +60,6 @@ margin-left: 1.5px;
 #footer {
     text-align: center;
     padding: 10px;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
 }
 
 #footer a {
