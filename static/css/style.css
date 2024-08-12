@@ -151,6 +151,17 @@ font-size: 22px;
     padding-top: 10px;
 }
 
+#buttons button,
+#buttons a {
+    margin: 0px 3px;
+}
+
+#buttons button.active {
+    color: white;
+    border: none;
+    box-shadow: inset 6px 6px 6px rgba(0, 0, 0, 0.3)
+}
+
 .btn-icon {
     margin-left: 3px;
 }

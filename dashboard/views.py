@@ -15,7 +15,11 @@ class Dashboard(View):
     def get(self, request):
         items = Item.objects.filter(user=self.request.user.id).order_by('name')
         items_filter = ItemFilter(request.GET, queryset = items)
-        return render(request, 'dashboard/dashboard.html', {'items': items_filter.qs, 'items_filter': items_filter})
+        return render(request, 'dashboard/dashboard.html', {
+            'location': request.GET.get('location', default=''),
+            'items': items_filter.qs,
+            'items_filter': items_filter
+        })
 
 
 class AddItem(LoginRequiredMixin, SuccessMessageMixin, CreateView):
