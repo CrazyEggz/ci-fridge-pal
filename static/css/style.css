@@ -139,8 +139,26 @@ font-size: 22px;
 }
 
 /* ---Dashboard Page--- */
+#buttons-container {
+    height: 58px;
+    background-color: white;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+}
+
+#buttons {
+    padding-top: 10px;
+}
+
 .btn-icon {
     margin-left: 3px;
+}
+
+.table-head {
+    position: sticky;
+    top: 58px;
+    left: 0px;
 }
 
 /* ---Media Queries--- */
