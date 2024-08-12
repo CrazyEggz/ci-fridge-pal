@@ -46,6 +46,7 @@
         <!-- Inventory Table -->
         <div id="table-container">
             <table id="fridge-table" class="table table-hover table-striped">
+                {% if items %}
                 <thead class="table-head">
                     <tr>
                         <th scope="col"></th>
@@ -65,49 +66,42 @@
                     </tr>
                 </thead>
                 <tbody class="table-body">
-                    {% if items %}
-                        {% for item in items %}
-                            <tr>
-                                <td>
-                                    {% if item.location == 0 %}
-                                    <i class="grey-icon btn-icon fa-solid fa-droplet"></i>
-                                    {% else %}
-                                    <i class="grey-icon btn-icon fa-regular fa-snowflake"></i>
-                                    {% endif %}
-                                </td>
-                                <td scope="row">{{ item.name }}</td>
-                                <td>{{ item.quantity }} {{ item.unit | default_if_none:'' }}</td>
-                                <td>
-                                    {% if item.expiry_date_type == 0 %}
-                                        <div id="bbd" class="expiry-date-tag d-inline-flex"><small>BBD</small></div>
-                                    {% endif %}
-                                    {% if item.expiry_date_type == 1 %}
-                                        <div id="ubd" class="expiry-date-tag d-inline-flex"><small>UBD</small></div>
-                                    {% endif %}
-                                    {{ item.expiry_date }}
-                                </td>
-                                <td>{{ item.category | default_if_none:'-' }}</td>
-                                <td>
-                                    <a href="{% url 'edit-item' item.pk %}"><i class="fa-solid fa-pen"></i></a>
-                                </td>
-                                <td>
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteItemModal"
-                                        data-bs-delete-url="{% url 'delete-item' item.pk %}" data-bs-item-name="{{ item.name }}">
-                                        <i class="fa-regular fa-trash-can"></i>
-                                    </button>
-                                </td>
-                            </tr>
-                        {% endfor %}
-                    {% else %}
+                    {% for item in items %}
                     <tr>
-                        <th scope="row">-</th>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>-</td>
-                        <td>Edit</td>
-                        <td>Consumed</td>
-                        <td>Wasted</td>
+                        <td>
+                            {% if item.location == 0 %}
+                            <i class="grey-icon btn-icon fa-solid fa-droplet"></i>
+                            {% else %}
+                            <i class="grey-icon btn-icon fa-regular fa-snowflake"></i>
+                            {% endif %}
+                        </td>
+                        <td scope="row">{{ item.name }}</td>
+                        <td>{{ item.quantity }} {{ item.unit | default_if_none:'' }}</td>
+                        <td>
+                            {% if item.expiry_date_type == 0 %}
+                            <div id="bbd" class="expiry-date-tag d-inline-flex"><small>BBD</small></div>
+                            {% endif %}
+                            {% if item.expiry_date_type == 1 %}
+                            <div id="ubd" class="expiry-date-tag d-inline-flex"><small>UBD</small></div>
+                            {% endif %}
+                            {{ item.expiry_date }}
+                        </td>
+                        <td>{{ item.category | default_if_none:'-' }}</td>
+                        <td>
+                            <a href="{% url 'edit-item' item.pk %}"><i class="fa-solid fa-pen"></i></a>
+                        </td>
+                        <td>
+                            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#deleteItemModal"
+                                data-bs-delete-url="{% url 'delete-item' item.pk %}" data-bs-item-name="{{ item.name }}">
+                                <i class="fa-regular fa-trash-can"></i>
+                            </button>
+                        </td>
                     </tr>
+                    {% endfor %}
+                    {% else %}
+                    <div id="no-item-message">
+                        <h5 class="fw-light">You have no items</h5>
+                    </div>
                     {% endif %}
                 </tbody>
             </table>
