@@ -35,13 +35,20 @@ position: absolute;
 margin-left: 1.5px;
 }
 
-#user-name {
-    background-color: orangered;
+#user-status > p {
     color: white;
     padding: 2px 10px;
     border-radius: 20px;
     margin-bottom: auto;
     margin-left: 10px;
+}
+
+#status-logged-in {
+    background-color: orangered;
+}
+
+#status-not-logged-in {
+    background-color: grey;
 }
 
 .bg-light {

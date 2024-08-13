@@ -48,11 +48,13 @@
                         {% endif %}
                     </ul>
                 </div>
-                {% if user.is_authenticated %}
-                <div id="logged-in-user" class="nav-item">
-                    <p id="user-name"><i class="fa-regular fa-user"></i>&nbsp{{ user.get_username }}</p>
+                <div id="user-status" class="nav-item">
+                    {% if user.is_authenticated %}
+                    <p id="status-logged-in"><i class="fa-regular fa-user"></i>&nbsp{{ user.get_username }}</p>
+                    {% else %}
+                    <p id="status-not-logged-in"><i class="fa-regular fa-user"></i>&nbspNot Logged In</p>
+                    {% endif %}
                 </div>
-                {% endif %}
                 <button id="burger-icon" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
