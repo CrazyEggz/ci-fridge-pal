@@ -10,11 +10,12 @@ from .models import Item
 from .forms import ItemForm
 from .filters import ItemFilter
 
-# Create your views here.
+
 class Dashboard(LoginRequiredMixin, View):
     def get(self, request):
-        items = Item.objects.filter(user=self.request.user.id).order_by('expiry_date')
-        items_filter = ItemFilter(request.GET, queryset = items)
+        user_id = self.request.user.id
+        items = Item.objects.filter(user=user_id).order_by('expiry_date')
+        items_filter = ItemFilter(request.GET, queryset=items)
         items_filter_applied = Dashboard.isItemFilterApplied(items_filter)
 
         return render(request, 'dashboard/dashboard.html', {
@@ -23,13 +24,13 @@ class Dashboard(LoginRequiredMixin, View):
             'items_filter': items_filter,
             'items_filter_applied': items_filter_applied,
         })
-    
+
     def isItemFilterApplied(items_filter):
         if not items_filter.form.is_valid():
             return False
 
         for key, value in items_filter.form.cleaned_data.items():
-            if key != "location" and value != '' and not value is None:
+            if key != "location" and value != '' and value is not None:
                 return True
 
         return False
