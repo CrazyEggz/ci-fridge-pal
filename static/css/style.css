@@ -154,11 +154,7 @@ margin-left: 1.5px;
 }
 
 /* ---Media Queries--- */
-@media screen and (max-width: 990px) {
-    #logged-in-user {
-        order: 0;
-    }
-
+@media screen and (max-width: 767px) {
     #burger-icon {
         order: 1;
         border: none;
