@@ -4,11 +4,11 @@
 {% block content %}
 <div class="row">
     <div class="col-11 col-md-4 mx-auto mt-5">
-        <h1>Sign In</h1>
+        <h1>Log In</h1>
         <form method="post">
             {% csrf_token %}
             {{ form | crispy }}
-            <button class="btn btn-outline-secondary">Sign in</button>
+            <button class="btn btn-outline-secondary">Log in</button>
         </form>
         <div>
             <small class="text-muted">Don't have an account? <a href="{% url 'register' %}">Register</a></small>
