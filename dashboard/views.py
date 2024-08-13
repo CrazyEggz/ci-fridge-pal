@@ -11,7 +11,7 @@ from .forms import ItemForm
 from .filters import ItemFilter
 
 # Create your views here.
-class Dashboard(View):
+class Dashboard(LoginRequiredMixin, View):
     def get(self, request):
         items = Item.objects.filter(user=self.request.user.id).order_by('expiry_date')
         items_filter = ItemFilter(request.GET, queryset = items)
