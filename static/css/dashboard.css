@@ -100,39 +100,62 @@ body {
     transform: translateY(-50%);
 }
 
+.line-break-cell {
+    height: 0px !important;
+    width: 100% !important;
+    padding: 0px !important;
+    margin: 0px !important;
+    border: 0px !important;
+    display: none;
+}
+
 @media screen and (max-width: 575px) {
     #fridge-table > thead {
         display: none;
     }
 
     #fridge-table > tbody > tr {
-        display: grid;
-        grid-template-columns: max-content 1fr 50%;
+        display: flex;
+        flex-wrap: wrap;
         width: 100%;
     }
 
-    #fridge-table > tbody td {
-        text-wrap: nowrap;
-        background-color: transparent;
-    }
-
-    #fridge-table > tbody td:nth-child(-n+3) {
+    #fridge-table > tbody td:nth-child(2),
+    #fridge-table > tbody td:nth-child(3) {
         border-bottom-width: 0px;
     }
 
-    #fridge-table > tbody td:nth-child(3n+3) {
+    #fridge-table > tbody td:nth-child(3),
+    #fridge-table > tbody td:nth-child(7) {
         text-align: right;
+    }
+
+    #fridge-table .name-cell,
+    #fridge-table .category-cell {
+        flex: 1;
+    }
+
+    #fridge-table .location-icon-cell {
+        padding-left: 0px;
+    }
+
+    #fridge-table .expiry-date-tag-cell {
+        padding-right: 0px;
+    }
+
+    #fridge-table .location-icon-cell,
+    #fridge-table .category-cell ~ td {
+        order: 1;
     }
 
     #fridge-table .edit-item-cell,
     #fridge-table .delete-item-cell {
         display: none;
+        width: 50%;
     }
 
     #fridge-table .edit-item-cell {
         background: lightgoldenrodyellow;
-        grid-column-start: 1;
-        grid-column-end: 3;
     }
 
     #fridge-table .delete-item-cell {
@@ -151,6 +174,10 @@ body {
 
     #fridge-table tr.active .edit-item-cell,
     #fridge-table tr.active .delete-item-cell {
-        display: table-cell;
+        display: block;
+    }
+
+    .line-break-cell {
+        display: block;
     }
 }

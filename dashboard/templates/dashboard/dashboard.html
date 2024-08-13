@@ -73,15 +73,16 @@
         <tbody class="table-body">
             {% for item in items %}
             <tr>
-                <td>
+                <td class="location-icon-cell">
                     {% if item.location == 0 %}
                     <i class="grey-icon btn-icon fa-solid fa-droplet"></i>
                     {% else %}
                     <i class="grey-icon btn-icon fa-regular fa-snowflake"></i>
                     {% endif %}
                 </td>
-                <td scope="row">{{ item.name }}</td>
+                <td class="name-cell">{{ item.name }}</td>
                 <td>{{ item.quantity }} {{ item.unit | default_if_none:'' }}</td>
+                <td class="line-break-cell"></td>
                 <td class="expiry-date-tag-cell">
                     {% if item.expiry_date_type == 0 %}
                     <div id="bbd" class="expiry-date-tag d-inline-flex"><small>BBD</small></div>
@@ -93,7 +94,8 @@
                 <td>
                     {{ item.expiry_date }}
                 </td>
-                <td>{{ item.category | default_if_none:'-' }}</td>
+                <td class="category-cell">{{ item.category | default_if_none:'-' }}</td>
+                <td class="line-break-cell button-line-break"></td>
                 <td class="edit-item-cell">
                     <a class="btn" href="{% url 'edit-item' item.pk %}"><i class="fa-solid fa-pen"></i></a>
                 </td>
