@@ -11,7 +11,7 @@
 {% include 'dashboard/dashboard_messages.html' %}
 <!-- Buttons -->
 <div class="d-flex flex-wrap justify-content-center justify-content-md-between mx-2 mx-md-4 mb-2 mb-md-0">
-    <div class="buttons d-inline-flex">
+    <div id="location-buttons" class="buttons d-inline-flex">
         <button data-parameter-key="{{ items_filter.form.location.name }}" data-parameter-value=""
             class="parameter-btn btn btn-primary {% if location == '' %}active{% endif %} px-2">All Items <i class="btn-icon fa-solid fa-basket-shopping"></i>
         </button>
@@ -23,9 +23,10 @@
         </button>
     </div>
     <div class="buttons d-inline-flex">
-        <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas"
+        <button id="filter-button" class="btn btn-primary {% if items_filter_applied %}applied{% endif %}" type="button" data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasFilter" aria-controls="offcanvasRight">Filter
             <i class="btn-icon fa-solid fa-filter"></i>
+            <p id="filter-button-applied-text">(Applied)</p>
         </button>
         <a href="{% url 'add-item' %}" class="btn btn-primary">Add Item <i class="fa-solid fa-plus"></i></a>
     </div>

@@ -26,10 +26,23 @@ body {
     margin: 0px 3px;
 }
 
-.buttons button.active {
+#location-buttons button.active {
     color: white;
     border: none;
     box-shadow: inset 6px 6px 6px rgba(0, 0, 0, 0.3)
+}
+
+#filter-button.applied {
+    background: orange;
+    border: none;
+}
+
+#filter-button #filter-button-applied-text {
+    display: none
+}
+
+#filter-button.applied #filter-button-applied-text {
+    display: inline
 }
 
 .btn-icon {

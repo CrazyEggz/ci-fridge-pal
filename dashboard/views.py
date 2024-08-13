@@ -15,11 +15,24 @@ class Dashboard(View):
     def get(self, request):
         items = Item.objects.filter(user=self.request.user.id).order_by('expiry_date')
         items_filter = ItemFilter(request.GET, queryset = items)
+        items_filter_applied = Dashboard.isItemFilterApplied(items_filter)
+
         return render(request, 'dashboard/dashboard.html', {
             'location': request.GET.get('location', default=''),
             'items': items_filter.qs,
-            'items_filter': items_filter
+            'items_filter': items_filter,
+            'items_filter_applied': items_filter_applied,
         })
+    
+    def isItemFilterApplied(items_filter):
+        if not items_filter.form.is_valid():
+            return False
+
+        for key, value in items_filter.form.cleaned_data.items():
+            if key != "location" and value != '' and not value is None:
+                return True
+
+        return False
 
 
 class AddItem(LoginRequiredMixin, SuccessMessageMixin, CreateView):
