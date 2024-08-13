@@ -181,4 +181,8 @@ body {
     .line-break-cell {
         display: block;
     }
+
+    #footer {
+        display: none;
+    }
 }
