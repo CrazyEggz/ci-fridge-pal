@@ -9,7 +9,7 @@
                 what's in stock, and never miss a best-before date again.
             </p>
             <div>
-                <a href="{% url 'login' %}" class="btn btn-primary">Get started now!</a>
+                <a href="{% if request.user.is_authenticated %}{% url 'dashboard' %}{% else %}{% url 'login' %}{% endif %}" class="btn btn-primary">Get started now!</a>
             </div>
         </div>
     </div>
