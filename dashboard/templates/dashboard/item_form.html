@@ -3,18 +3,18 @@
 
 {% block content %}
 <div class="row">
-    <div class="col-11 col-md-4 mx-auto mt-5">
+    <div class="col-10 col-sm-8 col-md-6 mx-auto mt-2">
         <form method="post">
             {% csrf_token %}
             {{ form | crispy }}
-            <button class="btn btn-primary">
+            <div class="d-grid">
                 {% if request.resolver_match.url_name == "add-item" %}
-                Add
+                <button class="btn btn-primary">Add Item</button>
                 {% else %}
-                Edit
+                <button class="btn btn-primary">Edit Item</button>
                 {% endif %}
-                Item
-            </button>
+                </button>
+            </div>
         </form>
     </div>
 </div>
