@@ -50,9 +50,9 @@
                 </div>
                 <div id="user-status" class="nav-item">
                     {% if user.is_authenticated %}
-                    <p id="status-logged-in"><i class="fa-regular fa-user"></i>&nbsp{{ user.get_username }}</p>
+                    <p id="status-logged-in"><i class="fa-regular fa-user"></i>&nbsp;{{ user.get_username }}</p>
                     {% else %}
-                    <p id="status-not-logged-in"><i class="fa-regular fa-user"></i>&nbspNot Logged In</p>
+                    <p id="status-not-logged-in"><i class="fa-regular fa-user"></i>&nbsp;Not Logged In</p>
                     {% endif %}
                 </div>
                 <button id="burger-icon" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"

@@ -17,6 +17,10 @@ body {
     flex: 1;
 }
 
+#fridge-table-wrapper .hidden-column {
+    display: none;
+}
+
 .buttons {
     padding-top: 10px;
 }
@@ -78,12 +82,12 @@ body {
     text-align: center;
 }
 
-#bbd {
+.best-before-date-tag {
     color: white;
     background-color: #f7cd4c;
 }
 
-#ubd {
+.use-by-date-tag {
     color: white;
     background-color: #f85858;
 }
