@@ -14,6 +14,7 @@ body {
 
 #fridge-table-wrapper {
     overflow-y: scroll;
+    flex: 1;
 }
 
 .buttons {
