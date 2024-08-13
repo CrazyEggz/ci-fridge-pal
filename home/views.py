@@ -2,17 +2,17 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.views.generic import TemplateView, View
 from django.contrib.auth import authenticate, login
-from .forms import SignUpForm
+from .forms import RegisterForm
 
 # Create your views here.
 
-class SignUp(View):
+class Register(View):
     def get(self, request):
-        form = SignUpForm()
-        return render(request, 'home/signup.html', {'form': form})
+        form = RegisterForm()
+        return render(request, 'home/register.html', {'form': form})
 
     def post(self, request):
-        form = SignUpForm(request.POST)
+        form = RegisterForm(request.POST)
         if form.is_valid():
             form.save()
             user = authenticate(
@@ -22,7 +22,7 @@ class SignUp(View):
             login(request, user)
             return redirect('home')
         else:
-            return render(request, 'home/signup.html', {'form': form})
+            return render(request, 'home/register.html', {'form': form})
 
 # For test
 class Home(TemplateView):
