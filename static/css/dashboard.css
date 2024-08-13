@@ -1,0 +1,154 @@
+html, body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+#fridge-table-wrapper {
+    overflow-y: scroll;
+}
+
+.buttons {
+    padding-top: 10px;
+}
+
+.buttons button,
+.buttons a {
+    margin: 0px 3px;
+}
+
+.buttons button.active {
+    color: white;
+    border: none;
+    box-shadow: inset 6px 6px 6px rgba(0, 0, 0, 0.3)
+}
+
+.btn-icon {
+    margin-left: 3px;
+}
+
+.grey-icon {
+    color: #767676;
+}
+
+#fridge-table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.table-head {
+    border-bottom: solid #767676;
+    position: sticky;
+    top: 0px;
+    left: 0px;
+}
+
+.expiry-date-tag-cell {
+    text-align: right;
+}
+
+.expiry-date-tag {
+    font-size: smaller;
+    width: 38px;
+    border-radius: 15px;
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+}
+
+#bbd {
+    color: white;
+    background-color: #f7cd4c;
+}
+
+#ubd {
+    color: white;
+    background-color: #f85858;
+}
+
+.edit-item-cell .btn {
+    color: rgba(var(--bs-link-color-rgb),var(--bs-link-opacity,1));
+}
+
+.delete-item-cell .btn {
+    color: orangered;
+}
+
+#no-item-message {
+    position: relative;
+    height: 200px;
+    background-color: lightgrey;
+    margin-top: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;;
+}
+
+#no-item-message h5 {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    transform: translateY(-50%);
+}
+
+@media screen and (max-width: 575px) {
+    #fridge-table > thead {
+        display: none;
+    }
+
+    #fridge-table > tbody > tr {
+        display: grid;
+        grid-template-columns: max-content 1fr 50%;
+        width: 100%;
+    }
+
+    #fridge-table > tbody td {
+        text-wrap: nowrap;
+        background-color: transparent;
+    }
+
+    #fridge-table > tbody td:nth-child(-n+3) {
+        border-bottom-width: 0px;
+    }
+
+    #fridge-table > tbody td:nth-child(3n+3) {
+        text-align: right;
+    }
+
+    #fridge-table .edit-item-cell,
+    #fridge-table .delete-item-cell {
+        display: none;
+    }
+
+    #fridge-table .edit-item-cell {
+        background: lightgoldenrodyellow;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+
+    #fridge-table .delete-item-cell {
+        background: orangered;
+    }
+
+    #fridge-table .edit-item-cell > .btn,
+    #fridge-table .delete-item-cell > .btn {
+        height: 100%;
+        width: 100%;
+    }
+
+    #fridge-table .delete-item-cell > .btn {
+        color: #fff;
+    }
+
+    #fridge-table tr.active .edit-item-cell,
+    #fridge-table tr.active .delete-item-cell {
+        display: table-cell;
+    }
+}

@@ -33,3 +33,8 @@ const parameterButtons = document.getElementsByClassName('parameter-btn')
 for (let button of parameterButtons) {
   button.addEventListener('click', onParameterButtonClick);
 }
+
+const tableRows = document.querySelectorAll('#fridge-table > tbody > tr')
+for (let row of tableRows) {
+  row.addEventListener('click', () => row.classList.toggle("active"));
+}
