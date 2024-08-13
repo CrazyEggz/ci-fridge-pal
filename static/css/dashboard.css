@@ -75,10 +75,12 @@ body {
 
 .edit-item-cell .btn {
     color: rgba(var(--bs-link-color-rgb),var(--bs-link-opacity,1));
+    padding: 0px;
 }
 
 .delete-item-cell .btn {
     color: orangered;
+    padding: 0px;
 }
 
 #no-item-message {
