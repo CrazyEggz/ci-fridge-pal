@@ -88,6 +88,43 @@ Balsamiq Wireframes was used to create the wireframe which serves as a guide for
 ##### [ Back to Top ](#table-of-contents)
 
 ## Agile Project Management
+In developing my fridge inventory web app, I adopted Agile methodology to ensure flexibility, continuous improvement, and efficient project management. The use of Agile allowed for iterative development, enabling me to frequently reassess and adjust the project scope. Central to this approach was the utilization of a Kanban board on GitHub Projects.
+My Kanban board can be viewed here: **ADD LINK HERE**
+### Kanban Board Overview
+I used the Kanban Board to track user stories, bugs needs to be fixed, manage tasks, and visualise the project’s progress in real-time.
+My Kanban Board consists of the following sections:
+
+- **Backlog**: This section contains all the tasks and user stories that were planned to be implemented. Tasks are ordered with the highest priority at the top.
+- **Implementation In Progress**: Work in progress was tracked here. Tasks in this section are focused solely on the implementation of functionalities.
+- **Styling In Progress**: This section tracks tasks where the functionalities have been completed, and styling is needed.
+- **Done**: Tasks that were completed successfully were moved to this column and closed.
+- **Future Features**: Features that were not implemented during this iteration and will be tackled in the future.
+
+### User Stories Overview
+User stories were instrumental in shaping the design of my Fridge Pal website by ensuring that every feature aligned with user requirements. Each user story was carefully crafted with specific acceptance criteria and associated tasks, providing a clear roadmap for development. By mapping these user stories onto the Kanban board, I was able to prioritize tasks effectively and ensure that the design process remained focused on delivering a user-centric experience.
+
+### List of User Stories
+**User Authentication**
+- [User registration](https://github.com/CrazyEggz/ci-fridge-pal/issues/1)
+- [User login](https://github.com/CrazyEggz/ci-fridge-pal/issues/2)
+- [User logout](https://github.com/users/CrazyEggz/projects/4/views/1?query=sort%3Aupdated-desc+is%3Aopen&pane=issue&itemId=74778503)
+
+**Inventory Management**
+- [Add Items to the Inventory](https://github.com/CrazyEggz/ci-fridge-pal/issues/4)
+- [Edit an Item in the inventory](https://github.com/CrazyEggz/ci-fridge-pal/issues/5)
+- [Delete an item from the inventory](https://github.com/CrazyEggz/ci-fridge-pal/issues/6)
+- [View all the items in the inventory](https://github.com/CrazyEggz/ci-fridge-pal/issues/7)
+- [Search items in the inventory](https://github.com/CrazyEggz/ci-fridge-pal/issues/8)
+- [Display expiry date information](https://github.com/CrazyEggz/ci-fridge-pal/issues/13)
+
+**Notification & Alerts**
+- [Display success messages](https://github.com/CrazyEggz/ci-fridge-pal/issues/12)
+- [Highlight items when the best-before date is near](https://github.com/CrazyEggz/ci-fridge-pal/issues/9)
+
+**About Fridge Pal**
+- [Brief introduction about Fridge Pal](https://github.com/CrazyEggz/ci-fridge-pal/issues/3)
+
+
 ##### [ Back to Top ](#table-of-contents)
 
 ## Features Implemented
