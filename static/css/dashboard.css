@@ -14,8 +14,12 @@ body {
 
 #expiry-counts {
     border-radius: var(--bs-border-radius-pill);
-    background-image: linear-gradient(to right, #ffb1b1, #90d8c6);
+    background-image: linear-gradient(to right, #fa3d3d, #fa3d3d, #eab12f, #ffcd5c);
     color: white;
+}
+
+#expiry-counts > div {
+    flex: 1 1 50%;
 }
 
 #fridge-table-wrapper {
