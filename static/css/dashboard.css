@@ -27,6 +27,11 @@ body {
     flex: 1;
 }
 
+#fridge-table-wrapper,
+#fridge-table-wrapper tr {
+    border-color: #e4e4e4;
+}
+
 #fridge-table-wrapper .hidden-column {
     display: none;
 }
@@ -114,21 +119,21 @@ body {
 
 .best-before-date-tag {
     color: white;
-    background-color: #b5c0ac;
+    background-color: #8bcbb4;
 }
 
 .use-by-date-tag {
     color: white;
-    background-color: #d4b3b3;
+    background-color: #f0aaa9;
 }
 
 .edit-item-cell .btn {
-    color: #68d990;
+    color: #8bcbb4;
     padding: 0px;
 }
 
 .delete-item-cell .btn {
-    color: #ff4969;
+    color: #f0a9a9;
     padding: 0px;
 }
 
@@ -159,6 +164,10 @@ body {
 }
 
 @media screen and (max-width: 575px) {
+    #fridge-table-wrapper {
+        border-top: 1px solid #e4e4e4;
+    }
+
     #fridge-table > thead {
         display: none;
     }
@@ -204,21 +213,18 @@ body {
     }
 
     #fridge-table .edit-item-cell {
-        background: lightgoldenrodyellow;
+        background: #8bcbb4;
     }
 
     #fridge-table .delete-item-cell {
-        background: orangered;
+        background: #f0a9a9;
     }
 
     #fridge-table .edit-item-cell > .btn,
     #fridge-table .delete-item-cell > .btn {
         height: 100%;
         width: 100%;
-    }
-
-    #fridge-table .delete-item-cell > .btn {
-        color: #fff;
+        color: white;
     }
 
     #fridge-table tr.active .edit-item-cell,
