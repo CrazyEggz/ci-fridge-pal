@@ -89,7 +89,10 @@ Balsamiq Wireframes was used to create the wireframe which serves as a guide for
 
 ## Agile Project Management
 In developing my fridge inventory web app, I adopted Agile methodology to ensure flexibility, continuous improvement, and efficient project management. The use of Agile allowed for iterative development, enabling me to frequently reassess and adjust the project scope. Central to this approach was the utilization of a Kanban board on GitHub Projects.
-My Kanban board can be viewed here: **ADD LINK HERE**
+My Kanban board can be viewed [here](https://github.com/users/CrazyEggz/projects/4/views/1).
+
+![alt Project board](static/images/readme/project_board.webp)
+
 ### Kanban Board Overview
 I used the Kanban Board to track user stories, bugs needs to be fixed, manage tasks, and visualise the project’s progress in real-time.
 My Kanban Board consists of the following sections:
