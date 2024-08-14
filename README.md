@@ -76,15 +76,20 @@ Balsamiq Wireframes was used to create the wireframe which serves as a guide for
 ![alt user workflow diagram](static/images/readme/wireframe_landing_page.webp)
 
 #### Laptop - About Page
-![alt user workflow diagram](static/images/readme/wireframe_about_page.webp)
+![user workflow diagram](static/images/readme/wireframe_about_page.webp)
 
 #### Laptop - Inventory Page
-![alt user workflow diagram](static/images/readme/wireframe_inventory_page.webp)
+![user workflow diagram](static/images/readme/wireframe_inventory_page.webp)
 
 #### Phone
-![alt user workflow diagram](static/images/readme/wireframe_phone.webp)
+![user workflow diagram](static/images/readme/wireframe_phone.webp)
 
 ### Database Planning
+
+Relational database was used for this project.
+Lucidchart was used to create my database entity relationship diagram. The diagram illustrates the relationship between individual models.
+![ER diagram](static/images/readme/entity_relationship_diagram.webp)
+
 ##### [ Back to Top ](#table-of-contents)
 
 ## Agile Project Management
