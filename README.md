@@ -106,6 +106,33 @@ Balsamiq Wireframes was used to create the wireframe which serves as a guide for
 ##### [ Back to Top ](#table-of-contents)
 
 ## Deployment
+### Deployment with Heroku
+Fridge Pal was developed locally in Gitpod, with frequent commits pushed to the GitHub repository. This project was deployed to Heroku, which integrates well with GitHub for continuous deployment. The deployment steps can be summarised as below:
+
+1. Create a database in [Code Institute CI](https://dbs.ci-dbs.net/). (**Note**: If you are not a Code Institute student, setup a Postgres or another Django-compatible database elsewhere)
+2. Clone the repository.
+3. Create an `env.py` file with the following file contents (fill in the `<...>` fields):
+```python
+import os
+
+os.environ["DATABASE_URL"] = "<YOUR DATABASE URL>"
+os.environ["SECRET_KEY"] = "<A RANDOMLY GENERATED SECRET KEY>"
+os.environ["DEBUG"] = "1"
+
+```
+> [!CAUTION]
+> `en.py` file contains sensitive information. Make sure not to push it.
+
+4. Run `pip3 install -r requirements.txt` to install the dependencies.
+4. Run `python3 manage.py migrate` to initialise your database.
+5. Run `python3 manage.py createsuperuser` to create a superuser.
+6. Login to Heroku and create a new deployment.
+7. Connect the Heroku app to your GitHub repo
+8. Create the following configuration variables (DO NOT CREATE `DEBUG`. This is not safe on a production environment):
+- DATABASE_URL
+- SECRET_KEY
+9. Click the "Deploy" button to deploy the app
+  
 ##### [ Back to Top ](#table-of-contents)
 
 ## Resources
