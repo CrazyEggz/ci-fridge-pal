@@ -79,7 +79,7 @@
         </thead>
         <tbody class="table-body">
             {% for item in items %}
-            <tr>
+            <tr class="{% if item.is_expired %}expired{% elif item.will_expire_soon %}expiring-soon{% endif %}">
                 <td class="location-icon-cell">
                     {% if item.location == 0 %}
                     <i class="grey-icon btn-icon fa-solid fa-droplet"></i>

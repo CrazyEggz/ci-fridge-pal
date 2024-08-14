@@ -97,6 +97,14 @@ body {
     border-spacing: 0;
 }
 
+#fridge-table tr.expired td {
+    color: #fb4141;
+}
+
+#fridge-table tr.expiring-soon td {
+    color: #e4a523;
+}
+
 .table-head {
     border-bottom: solid #767676;
     position: sticky;
