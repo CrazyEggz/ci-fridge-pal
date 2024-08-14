@@ -137,6 +137,14 @@ body {
     padding: 0px;
 }
 
+.edit-item-cell .btn:hover {
+    color: #6bcb94;
+}
+
+.delete-item-cell .btn:hover {
+    color: #f08989;
+}
+
 #no-item-message {
     position: relative;
     height: 200px;
