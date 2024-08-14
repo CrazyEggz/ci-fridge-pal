@@ -4,8 +4,8 @@
 
 Ever found yourself staring at a fridge full of forgotten items, only to realise they're past their expiry dates? I've been there too so many times. These everyday challenges inspired the creation of Fridge Pal inventory website — a simple solution to keep track of what's in your fridge, reduce food waste, make grocery shopping smarter and more efficient.
 
-==Add responsive design screenshot here==
-== Visit the live site here (add the heroku link) ==
+
+### [Visit the live site here](https://ci-fridge-pal-49590c8364e1.herokuapp.com/)
 
 *This is the final personal capstone project with Code Institute.*
 
