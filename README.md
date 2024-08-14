@@ -311,7 +311,7 @@ os.environ["DEBUG"] = "1"
 
 ```
 > [!CAUTION]
-> `en.py` file contains sensitive information. Make sure not to push it.
+> `env.py` file contains sensitive information. Make sure not to push it.
 
 4. Run `pip3 install -r requirements.txt` to install the dependencies.
 4. Run `python3 manage.py migrate` to initialise your database.
