@@ -18,11 +18,21 @@ class Dashboard(LoginRequiredMixin, View):
         items_filter = ItemFilter(request.GET, queryset=items)
         items_filter_applied = Dashboard.isItemFilterApplied(items_filter)
 
+        expired_count = 0
+        expiring_soon_count = 0
+        for item in items_filter.qs:
+            if item.is_expired:
+                expired_count += 1
+            elif item.will_expire_soon:
+                expiring_soon_count += 1
+
         return render(request, 'dashboard/dashboard.html', {
             'location': request.GET.get('location', default=''),
             'items': items_filter.qs,
             'items_filter': items_filter,
             'items_filter_applied': items_filter_applied,
+            'expired_count': expired_count,
+            'expiring_soon_count': expiring_soon_count,
         })
 
     def isItemFilterApplied(items_filter):

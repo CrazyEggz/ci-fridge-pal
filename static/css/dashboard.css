@@ -12,6 +12,12 @@ body {
     flex-direction: column;
 }
 
+#expiry-counts {
+    border-radius: var(--bs-border-radius-pill);
+    background-image: linear-gradient(to right, #ffb1b1, #90d8c6);
+    color: white;
+}
+
 #fridge-table-wrapper {
     overflow-y: scroll;
     flex: 1;

@@ -9,6 +9,10 @@
 
 {% block content %}
 {% include 'dashboard/dashboard_messages.html' %}
+<div id="expiry-counts" class="d-flex mx-4 my-1 my-md-2">
+    <div id="expired-count" class="flex-fill text-center">Items expired: {{ expired_count }}</div>
+    <div id="expiring-soon-count" class="flex-fill text-center">Items expiring soon: {{ expiring_soon_count }}</div>
+</div>
 <!-- Buttons -->
 <div class="d-flex flex-wrap justify-content-center justify-content-md-between mx-2 mx-md-4 mb-2 mb-md-0">
     <div id="location-buttons" class="buttons d-inline-flex">

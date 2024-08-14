@@ -1,3 +1,4 @@
+from datetime import date, timedelta
 from django.db import models
 from django.contrib.auth.models import User
 
@@ -21,6 +22,14 @@ class Item(models.Model):
 
     def __str__(self):
         return self.name
+
+    @property
+    def is_expired(self):
+        return self.expiry_date < date.today()
+
+    @property
+    def will_expire_soon(self):
+        return not self.is_expired and self.expiry_date < date.today() + timedelta(days=3)
 
 
 class Category(models.Model):
