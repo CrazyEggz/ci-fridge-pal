@@ -4,6 +4,8 @@
 
 Ever found yourself staring at a fridge full of forgotten items, only to realise they're past their expiry dates? I've been there too so many times. These everyday challenges inspired the creation of Fridge Pal inventory website — a simple solution to keep track of what's in your fridge, reduce food waste, make grocery shopping smarter and more efficient.
 
+![Responsive Devices View](static/images/readme/responsive-devices.webp)
+*Due to CSRF issues with [Am I Responsive?](https://ui.dev/amiresponsive), the server was modified to show data without being logged in.
 
 ### [Visit the live site here](https://ci-fridge-pal-49590c8364e1.herokuapp.com/)
 
@@ -140,12 +142,14 @@ User stories were instrumental in shaping the design of my Fridge Pal website by
 ### Home Page
 - A one-line introduction about the website, ensuring users know what this website does at first glance.
 - The **Get Started Now** button provides users with a quick and easy way to begin using the website.
+![home page](static/images/readme/home-page.webp)
 
 ### About Page ###
 - Non-logged-in users can visit this page to gain a better understanding of what Fridge Pal does before deciding if they want to use it.
 - Images are displayed as cards.
 - When the mouse hovers over each image, the image darkens and text is shown over it.
 - Buttons under each image allow users to read more, and the text on the button changes when clicked, providing users with a helpful hint.
+![About page](static/images/readme/about-page.webp)
 
 ### Inventory Page ###
 - Logged-in users can add new items to the inventory.
@@ -153,10 +157,15 @@ User stories were instrumental in shaping the design of my Fridge Pal website by
 - When a user clicks the delete button, a modal window pops up asking if they are sure about the deletion.
 - A message will appear at the top of the screen when an item has been successfully added, edited, or deleted.
 - A bar above the table shows the live count of expired items and items expiring within 3 days.
+![Dashboard header](static/images/readme/dashboard-header.webp)
 - Expired items and soon-to-expire items will be highlighted in the inventory table if present.
+![Dashboard table](static/images/readme/dashboard-table.webp)
 - **All items**, **Fridge**, and **Freezer** buttons allow users to easily view all items, fridge items, and freezer items.
 - The **Filter** button allows users to search for an item, and filter items by their expiry dates, categories, and days until expiration.
+![Dashboard filter offcanvas](static/images/readme/dashboard-filter-offcanvas.webp)
 - The **Filter** button will be highlighted reminding the user that filters are being applied.
+![Dashboard filter](static/images/readme/dashboard-filter.webp)
+![Dashboard filter applied](static/images/readme/dashboard-filter-applied.webp)
 - A popover is added to the table head Expiry date to remind users of the difference between best-before and use-by dates.
 
 ### Registration Page ###
@@ -170,11 +179,13 @@ User stories were instrumental in shaping the design of my Fridge Pal website by
 ### Log Out Page
 - A message is displayed telling the user they have been logged out successfully.
 - After successful logout, users have the option to either log back in or go to the home page.
-  
+![Log out page](static/images/readme/logout-page.webp)
+
 ### Nav Bar/ Footer
 - User status is clearly shown in the top right corner, letting users know whether they are logged in or not.
 - The navigation bar displays different content based on whether the user is logged in.
-
+![Navbar when logged in](static/images/readme/nav-login.webp)
+![Navbar when logged out](static/images/readme/nav-logout.webp)
 
 ##### [ Back to Top ](#table-of-contents)
 
@@ -328,5 +339,8 @@ os.environ["DEBUG"] = "1"
 
 ### Images
 All images were generated using free LLMs. See the [Technologies Used](#technologies-used) for details.
+
+### Code
+[This YouTube tutorial helped me to start my project](https://www.youtube.com/watch?v=EUMpUUXKvP0)
 
 ##### [ Back to Top ](#table-of-contents)
