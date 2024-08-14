@@ -51,26 +51,6 @@ body {
     box-shadow: inset 6px 6px 6px rgba(0, 0, 0, 0.3)
 }
 
-.btn-pink {
-    --bs-btn-bg: #f0a9a9;
-    --bs-btn-border-color: #f0a9a9;
-    --bs-btn-hover-bg: #e29797;
-    --bs-btn-focus-shadow-rgb: 140, 203, 185;
-    --bs-btn-active-bg: #e29797;
-    --bs-btn-disabled-bg: #f0a9a9;
-    --bs-btn-disabled-border-color: #f0a9a9;
-}
-
-.btn-green {
-    --bs-btn-bg: #8bcbb4;
-    --bs-btn-border-color: #8bcbb4;
-    --bs-btn-hover-bg: #7cbca5;
-    --bs-btn-focus-shadow-rgb: 140, 203, 185;
-    --bs-btn-active-bg: #7cbca5;
-    --bs-btn-disabled-bg: #8bcbb4;
-    --bs-btn-disabled-border-color: #8bcbb4;
-}
-
 #filter-button.applied {
     background: orange;
     border: none;

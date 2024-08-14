@@ -125,11 +125,6 @@ body {
     color: #464646;
 }
 
-#hero-content a {
-    background-color: #ff4969;
-    border: none;
-}
-
 /* ---About Page--- */
 #about-container {
     margin-top: 20px;
@@ -176,6 +171,37 @@ body {
 
 .about-content:hover, .opaque {
     opacity: 1;
+}
+
+/* ---Extra Button Colours */
+.btn-red {
+    --bs-btn-bg: #ff4969;
+    --bs-btn-border-color: #ff4969;
+    --bs-btn-hover-bg: #fb4141;
+    --bs-btn-focus-shadow-rgb: 140, 203, 185;
+    --bs-btn-active-bg: #fb4141;
+    --bs-btn-disabled-bg: #ff4969;
+    --bs-btn-disabled-border-color: #ff4969;
+}
+
+.btn-pink {
+    --bs-btn-bg: #f0a9a9;
+    --bs-btn-border-color: #f0a9a9;
+    --bs-btn-hover-bg: #e29797;
+    --bs-btn-focus-shadow-rgb: 140, 203, 185;
+    --bs-btn-active-bg: #e29797;
+    --bs-btn-disabled-bg: #f0a9a9;
+    --bs-btn-disabled-border-color: #f0a9a9;
+}
+
+.btn-green {
+    --bs-btn-bg: #8bcbb4;
+    --bs-btn-border-color: #8bcbb4;
+    --bs-btn-hover-bg: #7cbca5;
+    --bs-btn-focus-shadow-rgb: 140, 203, 185;
+    --bs-btn-active-bg: #7cbca5;
+    --bs-btn-disabled-bg: #8bcbb4;
+    --bs-btn-disabled-border-color: #8bcbb4;
 }
 
 /* ---Media Queries--- */
