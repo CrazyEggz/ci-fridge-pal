@@ -104,11 +104,12 @@
                 <td class="category-cell">{{ item.category | default_if_none:'-' }}</td>
                 <td class="line-break-cell button-line-break"></td>
                 <td class="edit-item-cell">
-                    <a class="btn" href="{% url 'edit-item' item.pk %}"><i class="fa-solid fa-pen"></i></a>
+                    <a class="btn" href="{% url 'edit-item' item.pk %}" aria-label="Edit Item"><i class="fa-solid fa-pen"></i></a>
                 </td>
                 <td class="delete-item-cell">
                     <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#deleteItemModal"
-                        data-bs-delete-url="{% url 'delete-item' item.pk %}" data-bs-item-name="{{ item.name }}">
+                        data-bs-delete-url="{% url 'delete-item' item.pk %}" data-bs-item-name="{{ item.name }}"
+                        aria-label="Delete Item">
                         <i class="fa-regular fa-trash-can"></i>
                     </button>
                 </td>
