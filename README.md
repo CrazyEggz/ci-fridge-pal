@@ -15,13 +15,12 @@ Ever found yourself staring at a fridge full of forgotten items, only to realise
 
 - [ User Experience (UX) ](#user-experience-ux)
 - [ Agile Project Management ](#agile-project-management)
-- [ Features Implemented ](#features-implemented)  
-- [ Future Features ](#future-features)  
-- [ Technologies Used ](#technologies-used) 
-- [ Validation & Testing ](#validation--testing)  
-- [ Bugs ](#bugs)  
+- [ Features Implemented ](#features-implemented)
+- [ Future Features ](#future-features)
+- [ Technologies Used ](#technologies-used)
+- [ Validation & Testing ](#validation--testing)
 - [ Deployment ](#deployment)
-- [ Resources ](#resources)  
+- [ Resources ](#resources)
 - [ Credits & Acknowledgements ](#credits--acknowledgements)
 
 ## User Experience (UX)
@@ -290,9 +289,6 @@ While automated testing helps significantly with catching bugs, there are someti
 | As a **user**, I **cannot delete another user's item** |✅ | ✅
 | As a **user**, I can **view a responsive dashboard layout on my phone** |✅ | ✅
 
-##### [ Back to Top ](#table-of-contents)
-
-## Bugs
 ##### [ Back to Top ](#table-of-contents)
 
 ## Deployment
