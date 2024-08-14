@@ -29,7 +29,8 @@ class Item(models.Model):
 
     @property
     def will_expire_soon(self):
-        return not self.is_expired and self.expiry_date < date.today() + timedelta(days=3)
+        inThreeDays = date.today() + timedelta(days=3)
+        return not self.is_expired and self.expiry_date < inThreeDays
 
 
 class Category(models.Model):
