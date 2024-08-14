@@ -97,6 +97,7 @@ body {
 #footer a {
     font-size: 120%;
     padding: 0px 5px;
+    color: inherit;
 }
 
 /* ---Home Page--- */
