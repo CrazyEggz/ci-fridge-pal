@@ -131,10 +131,62 @@ User stories were instrumental in shaping the design of my Fridge Pal website by
 ##### [ Back to Top ](#table-of-contents)
 
 ## Features Implemented
+
+### Home Page
+- A one-line introduction about the website, ensuring users know what this website does at first glance.
+- The **Get Started Now** button provides users with a quick and easy way to begin using the website.
+
+### About Page ###
+- Non-logged-in users can visit this page to gain a better understanding of what Fridge Pal does before deciding if they want to use it.
+- Images are displayed as cards.
+- When the mouse hovers over each image, the image darkens and text is shown over it.
+- Buttons under each image allow users to read more, and the text on the button changes when clicked, providing users with a helpful hint.
+
+### Inventory Page ###
+- Logged-in users can add new items to the inventory.
+- Logged-in users can edit and delete existing items.
+- When a user clicks the delete button, a modal window pops up asking if they are sure about the deletion.
+- A message will appear at the top of the screen when an item has been successfully added, edited, or deleted.
+- A bar above the table shows the live count of expired items and items expiring within 3 days.
+- Expired items and soon-to-expire items will be highlighted in the inventory table if present.
+- **All items**, **Fridge**, and **Freezer** buttons allow users to easily view all items, fridge items, and freezer items.
+- The **Filter** button allows users to search for an item, and filter items by their expiry dates, categories, and days until expiration.
+- The **Filter** button will be highlighted reminding the user that filters are being applied.
+- A popover is added to the table head Expiry date to remind users of the difference between best-before and use-by dates.
+
+### Registration Page ###
+- Secure login functionality allows users to log in securely.
+- Successful registration automatically logs the user in and redirects them to the home page.
+
+### Log In Page
+- Secure signup functionality allows users to register securely.
+- Successful login redirects users to the inventory page.
+
+### Log Out Page
+- A message is displayed telling the user they have been logged out successfully.
+- After successful logout, users have the option to either log back in or go to the home page.
+  
+### Nav Bar/ Footer
+- User status is clearly shown in the top right corner, letting users know whether they are logged in or not.
+- The navigation bar displays different content based on whether the user is logged in.
+
+
 ##### [ Back to Top ](#table-of-contents)
 
 ## Future Features
+
+### Locate items using a layout diagram:
+  - User can generate a diagram of their fridge layout.
+  - Users can enter the compartment number when they create a new item
+which will be mapped to the fridge layout diagram.
+  - The diagram can show users which compartment an item is stored in.
+
+### Track wasted food:
+- Consume or waste can be selected when users delete an item.
+- A separate table keeps track the wasted food.
+
 ##### [ Back to Top ](#table-of-contents)
+
 
 ## Technologies Used
 ##### [ Back to Top ](#table-of-contents)
