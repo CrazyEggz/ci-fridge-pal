@@ -140,6 +140,41 @@ User stories were instrumental in shaping the design of my Fridge Pal website by
 ##### [ Back to Top ](#table-of-contents)
 
 ## Validation & Testing
+
+### Automated Testing
+While developing the Fridge Pal website, I wrote comprehensive Django tests to ensure the reliability and correctness of the application. These tests covered filters, forms, views, and models, helping to maintain data accuracy and consistency across the site.
+
+For filters, I verified that the filtering logic returned the expected results, such as filtering the data down to a specific location. The form tests ensured proper input validation and error handling, crucial for user interaction. View tests confirmed that expected data was present, security was enforced, and appropriate HTTP responses were returned, maintaining a consistent user experience. Lastly, model tests validated object functions such as expiry checking.
+
+![alt automated testing screenshot](static/images/readme/automated_testing.webp)
+
+### Manual Testing
+While automated testing helps significantly with catching bugs, there are sometimes things that are very hard to catch with automated testing, like something looking a bit odd in the frontend or a button mysteriously disappearing. Checking that the frontend looks as expected is extremely difficult as it is hard to quantify what a test should look for. To deal with this, manual testing was done as well in the form of testing user stories, as well as some small other tests written below in user story format for consistency.
+
+| **User Stories** |  Tested |  Works As Intended |
+|  --- | --- | --- |
+| As an **admin**, I can **edit the set of categories and units from the admin panel** | ✅ | ✅
+| As an **unregistered user** I can **find out about this website before registering** |✅ | ✅
+| As an **unregistered user** I can **register** |✅ | ✅
+| As an **unregistered user** I **cannot access the dashboard** |✅ | ✅
+| As an **unregistered user** I **cannot access the add item page** |✅ | ✅
+| As an **unregistered user** I **cannot access the edit item page** |✅ | ✅
+| As an **unregistered user** I **cannot submit a POST request to the delete item page** |✅ | ✅
+| As a **user**, I can **log in** |✅ | ✅
+| As a **user**, I can **log out** |✅ | ✅
+| As a **user**, I can **view my dashboard** |✅ | ✅
+| As a **user**, I can **see any expired and soon to expire items easily** |✅ | ✅
+| As a **user**, I can **filter to everything, the fridge, or the freezer** |✅ | ✅
+| As a **user**, I can **create a new item** |✅ | ✅
+| As a **user**, I can **edit an existing item** |✅ | ✅
+| As a **user**, I can **delete an existing item** |✅ | ✅
+| As a **user**, I can **see feedback whenever interacting with an item** |✅ | ✅
+| As a **user**, I can **search for a item by case-insensitive name** |✅ | ✅
+| As a **user**, I can **search for a item by category and time left until expiry** |✅ | ✅
+| As a **user**, I **cannot edit another user's item** |✅ | ✅
+| As a **user**, I **cannot delete another user's item** |✅ | ✅
+| As a **user**, I can **view a responsive dashboard layout on my phone** |✅ | ✅
+
 ##### [ Back to Top ](#table-of-contents)
 
 ## Bugs
