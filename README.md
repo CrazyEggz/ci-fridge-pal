@@ -230,6 +230,10 @@ which will be mapped to the fridge layout diagram.
 
 ## Validation & Testing
 
+### Accessibility Testing
+
+We used Chrome's built-in Lighthouse for accessibility testing and added aria-labels where necessary to make it accessible. All pages are 90+ when last checked except for the dashboard where it takes a long time for fontawesome and bootstrap to load which caused the performance score to drop to 80% due to large page re-flowing once they loaded.
+
 ### HTML Validation
 
 I used the [W3 HTML Validator](https://validator.w3.org/) to check that my HTML conforms to the standards they impose. The un-authenticated endpoints were checked using the Heroku URL and authenticated endpoints were checked via pasting the HTML from the network call into the Direct Input tab. All warnings and errors were fixed.
