@@ -69,7 +69,7 @@ margin-left: 1.5px;
 }
 
 #status-logged-in {
-    background-color: orangered;
+    background-color: #ff4969;
 }
 
 #status-not-logged-in {
@@ -126,7 +126,7 @@ margin-left: 1.5px;
 }
 
 #hero-content a {
-    background-color: #f85858;
+    background-color: #ff4969;
     border: none;
 }
 

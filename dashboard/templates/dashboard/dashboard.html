@@ -17,22 +17,22 @@
 <div class="d-flex flex-wrap justify-content-center justify-content-md-between mx-2 mx-md-4 mb-2 mb-md-0">
     <div id="location-buttons" class="buttons d-inline-flex">
         <button data-parameter-key="{{ items_filter.form.location.name }}" data-parameter-value=""
-            class="parameter-btn btn btn-primary {% if location == '' %}active{% endif %} px-2">All Items <i class="btn-icon fa-solid fa-basket-shopping"></i>
+            class="parameter-btn btn btn-pink {% if location == '' %}active{% endif %} px-2">All Items <i class="btn-icon fa-solid fa-basket-shopping"></i>
         </button>
         <button data-parameter-key="{{ items_filter.form.location.name }}" data-parameter-value="0"
-            class="parameter-btn btn btn-primary {% if location == '0' %}active{% endif %} px-2">My Fridge <i class="btn-icon fa-solid fa-droplet"></i>
+            class="parameter-btn btn btn-pink {% if location == '0' %}active{% endif %} px-2">My Fridge <i class="btn-icon fa-solid fa-droplet"></i>
         </button>
         <button data-parameter-key="{{ items_filter.form.location.name }}" data-parameter-value="1"
-            class="parameter-btn btn btn-primary {% if location == '1' %}active{% endif %} px-2">My Freezer <i class="btn-icon fa-regular fa-snowflake"></i>
+            class="parameter-btn btn btn-pink {% if location == '1' %}active{% endif %} px-2">My Freezer <i class="btn-icon fa-regular fa-snowflake"></i>
         </button>
     </div>
     <div class="buttons d-inline-flex">
-        <button id="filter-button" class="btn btn-primary {% if items_filter_applied %}applied{% endif %}" type="button" data-bs-toggle="offcanvas"
+        <button id="filter-button" class="btn btn-green {% if items_filter_applied %}applied{% endif %}" type="button" data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasFilter" aria-controls="offcanvasFilter">Filter
             <i class="btn-icon fa-solid fa-filter"></i>
             <span id="filter-button-applied-text">(Applied)</span>
         </button>
-        <a href="{% url 'add-item' %}" class="btn btn-primary">Add Item <i class="fa-solid fa-plus"></i></a>
+        <a href="{% url 'add-item' %}" class="btn btn-green">Add Item <i class="fa-solid fa-plus"></i></a>
     </div>
 
     <!-- Offcanvas Filter Form -->
