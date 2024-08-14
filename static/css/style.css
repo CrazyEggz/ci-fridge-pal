@@ -55,9 +55,9 @@ body {
 }
 
 #logo span {
-font-size: 22px;
-position: absolute;
-margin-left: 1.5px;
+    font-size: 22px;
+    position: absolute;
+    margin-left: 1.5px;
 }
 
 #user-status > p {
@@ -136,7 +136,7 @@ margin-left: 1.5px;
     padding: 0px 30px;
 }
 
-.about-image-container{
+.about-image-container {
     position: relative;
     text-align: center;
 }
