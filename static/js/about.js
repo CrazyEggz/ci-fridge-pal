@@ -1,7 +1,7 @@
 const aboutCardButtons = document.querySelectorAll('.about-card button');
 
-for (let button of aboutCardButtons) {
-    button.addEventListener('click', showContent)
+for (const button of aboutCardButtons) {
+    button.addEventListener('click', showContent);
 }
 
 /**
