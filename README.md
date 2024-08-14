@@ -189,6 +189,28 @@ which will be mapped to the fridge layout diagram.
 
 
 ## Technologies Used
+| Technology | Reason |
+| --- | --- |
+| HTML | Page Structure
+| Javascript | Event Listeners, Modals, Popovers
+| CSS | Page Styling
+| Bootstrap 5 | Page Styling
+| Bootswatch | Page Styling
+| Font Awesome | Icons
+| Python | Backend Server
+| Django | Backend Framework
+| CodeInstitute PostgreSQL | Database
+| Balsamiq Wireframes | Design
+| LucidChart | Design
+| Git | Version Control
+| GitHub | Code Hosting and Project Management
+| Heroku | Project Deployment
+| Fooocus | AI Image Generation using LLMs
+| Swarm UI | AI Image Generation using LLMs
+| Flex.1 Dev | Extra LLM for Image Generation
+| VSCode | IDE
+| GitPod | IDE
+
 ##### [ Back to Top ](#table-of-contents)
 
 ## Validation & Testing
@@ -288,7 +310,18 @@ os.environ["DEBUG"] = "1"
 ##### [ Back to Top ](#table-of-contents)
 
 ## Resources
+* [Django docs](https://www.djangoproject.com/)
+* [Crispyforms docs](https://django-crispy-forms.readthedocs.io/en/latest/)
+* [Stack Overflow](https://stackoverflow.com/)
+* [W3School](https://www.w3schools.com/)
+* [GeeksForGeeks](https://www.geeksforgeeks.org/)
+* [YouTube](https://www.youtube.com/)
+
 ##### [ Back to Top ](#table-of-contents)
 
 ## Credits & Acknowledgements
+
+### Images
+All images were generated using free LLMs. See the [Technologies Used](#technologies-used) for details.
+
 ##### [ Back to Top ](#table-of-contents)
